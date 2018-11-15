@@ -2,11 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import Router from 'next/router';
 import { inject, observer } from 'mobx-react';
-import { Transition, CSSTransition, TransitionGroup } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 
 import Header from './Header';
-import {AboutContents} from './contents'
-import config from '../site.config';
+import {AboutContents} from './contents';
 import '../styles.scss';
 
 @inject('storeFunc')
@@ -27,7 +26,7 @@ export default class Main extends React.Component {
           mountOnEnter
           unmountOnExit
           onExited={() => {
-            Router.push(this.props.storeFunc.target)
+            Router.push(this.props.storeFunc.target);
           }}
         >
           <AboutContents />

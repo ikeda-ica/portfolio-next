@@ -6,13 +6,11 @@ import { inject, observer } from 'mobx-react';
 @observer
 export default class Header extends React.Component {
   constructor(props){
-    super(props)
+    super(props);
   }
 
   componentWillMount(){
     this.props.storeFunc.isShow = true;
-    console.log(this.props.storeFunc)
-//    this.props.storeFunc.load()
   }
 
   render(){
@@ -36,7 +34,7 @@ export default class Header extends React.Component {
                   this.props.storeFunc.target = target;
                   this.props.storeFunc.isShow = false;
                 }
-                }}>works</span>
+              }}>works</span>
             </li>
             <li>
               <span onClick={() => {
@@ -45,11 +43,11 @@ export default class Header extends React.Component {
                   this.props.storeFunc.target = target;
                   this.props.storeFunc.isShow = false;
                 }
-                }}>Contact</span>
+              }}>Contact</span>
             </li>
           </ul>
         </nav>
       </header>
-    )
+    );
   }
 }

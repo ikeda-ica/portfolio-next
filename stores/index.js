@@ -1,22 +1,21 @@
-import { action, observable } from 'mobx'
+import { action, observable } from 'mobx';
 import Router from 'next/router';
 
 const delayFunc = (waitSeconds, someFunction) => {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve(someFunction())
-    }, waitSeconds)
-  })
-}
+      resolve(someFunction());
+    }, waitSeconds);
+  });
+};
 
 class StoreFunc {
   @observable isShow = false;
   @observable target = '';
 
-
   @action.bound
   open(src){
-    Router.push('/' + src)
+    Router.push('/' + src);
   }
 }
 

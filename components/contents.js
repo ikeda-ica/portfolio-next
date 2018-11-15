@@ -14,7 +14,7 @@ export class AboutContents extends React.Component {
           </p>
           <ul>
             {config.skills.map((skill, index) =>
-              <li key={skill.type}>
+              <li key={skill.type} className={index}>
                 {skill.type}: {skill.level}
               </li>
             )}
@@ -33,6 +33,13 @@ export class WorkContents extends React.Component {
         <div className="mbg">
           <p>This is my works.</p>
         </div>
+        <ul className="works_list">
+          <li>
+            <a>
+              <img src="" />
+            </a>
+          </li>
+        </ul>
       </section>
     );
   }
